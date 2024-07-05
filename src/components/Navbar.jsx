@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useScrollPosition } from "../../../hooks/useScrollPosition.js";
-import useResizeObserver from "../../../hooks/useResizeObserver.js";
+import { useScrollPosition } from "../../src/hooks/useScrollPosition.js";
+import useResizeObserver from "../../src/hooks/useResizeObserver.js";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import {
@@ -8,8 +8,8 @@ import {
   repos,
   about,
   skills,
-} from "../../../editable-stuff/config.js";
-import { NavLink } from "./home/migration";
+} from "../../src/editable-stuff/config.js";
+import { NavLink } from "./home/migration.jsx";
 
 const Navigation = React.forwardRef((props, ref) => {
   // const { showBlog, FirstName } = config;
@@ -46,7 +46,7 @@ const Navigation = React.forwardRef((props, ref) => {
     >
       <Navbar.Brand
         className="navbar-brand"
-        href={process.env.PUBLIC_URL + "/#home"}
+        href={process.env.PUBLIC_URL + "/#Porfolio"}
       >
         {`<${mainBody.firstName} />`}
       </Navbar.Brand>
