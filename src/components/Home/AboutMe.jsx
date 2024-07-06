@@ -1,5 +1,4 @@
 import React from "react";
-
 import axios from "axios";
 import { Jumbotron } from "./migration";
 
@@ -7,10 +6,10 @@ const pictureLinkRegex = new RegExp(
   /[(http(s)?):(www.)?a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/
 );
 
-const AboutMe = ({ heading, message, link, imgSize, resume }) => {
+const AboutMe = ({ heading, message, link, imgSize, imageHeight, resume }) => {
   const [profilePicUrl, setProfilePicUrl] = React.useState("");
   const [showPic, setShowPic] = React.useState(Boolean(link));
-  // https://stackoverflow.com/questions/55840294/how-to-fix-missing-dependency-warning-when-using-useeffect-react-hook
+
   React.useEffect(() => {
     const handleRequest = async () => {
       const instaLink = "https://www.instagram.com/";
@@ -31,19 +30,17 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
     }
   }, [link]);
 
-
-
   return (
     <Jumbotron id="aboutme" className="m-0">
       <div className="container row">
         <div className="col-5 d-none d-lg-block align-self-center">
           {showPic && (
             <img
-              className="border border-secondary rounded-circle"
+              className="border border-secondary"
               src={profilePicUrl}
               alt="profilepicture"
               width={imgSize}
-              height={imgSize}
+              height={imageHeight}
             />
           )}
         </div>
