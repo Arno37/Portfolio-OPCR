@@ -12,4 +12,4 @@ ghpages.publish(
     if (err) console.log("ERROR: ", err);
     else console.log("PUBLISHED");
   }
-);
+)

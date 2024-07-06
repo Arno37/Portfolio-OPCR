@@ -5,7 +5,7 @@ const navBar = {
 
 // Main Body SECTION
 const mainBody = {
-  gradientColors: "#4484ce, #ff9b11, #ecf0f1, #9b59b6",
+  gradientColors: "#9b59b6, #8e8e93, #ff9500, #8e8e93",
   firstName: "Arnaud",
   middleName: "",
   lastName: "Rambourg",
@@ -13,12 +13,12 @@ const mainBody = {
   icons: [
     {
       image: "fa-github",
-      url: "https://github.com/hashirshoaeb",
+      url: "https://github.com/Arno37",
     },
 
     {
       image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/hashirshoaeb/",
+      url: "https://www.linkedin.com/in/arnaud-rambourg-a2a332291/",
     },
   ],
 };
@@ -44,7 +44,6 @@ const about = {
   imageSize: 200,
   message:
     "Développeur web junior récemment formé, je possède une expertise en communication efficace et empathique. Je suis spécialisé dans la résolution de problèmes techniques et non techniques, avec une capacité éprouvée à gérer les situations critiques. Mon engagement envers l'apprentissage continu et mon enthousiasme pour contribuer efficacement à des projets font de moi un atout précieux pour votre équipe.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
 };
 
 // PROJECTS SECTION
@@ -55,8 +54,8 @@ const about = {
 const repos = {
   show: true,
   heading: "Projets",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
-  reposLength: 4,
+  gitHubUsername: "Arno37", //i.e."johnDoe12Gh"
+  reposLength: 8,
   specificRepos: [],
 };
 
@@ -89,24 +88,19 @@ const skills = {
   show: true,
   heading: "Skills",
   hardSkills: [
-    { name: "Python", value: 90 },
-    { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
+    { name: "HTML/CSS", value: 35 },
+    { name: "JavaScript", value: 20},
+    { name: "React", value: 22 },
+    { name: "Node.js", value: 35},
+    { name: "MongoDB", value: 30 },
+    
   ],
   softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
-    { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
+    { name: "Positif", value: 80 },
+    { name: "Résilient", value: 82 },
+    { name: "Curieux", value: 75 },
+    { name: "Autonome", value: 85 },
+    { name: "Persévérant", value: 84 },
   ],
 };
 

@@ -4,7 +4,6 @@ import useResizeObserver from "../../src/hooks/useResizeObserver.js";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import {
-  mainBody,
   repos,
   about,
   skills,
@@ -48,7 +47,6 @@ const Navigation = React.forwardRef((props, ref) => {
         className="navbar-brand"
         href={process.env.PUBLIC_URL + "/#Porfolio"}
       >
-        {`<${mainBody.firstName} />`}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
       <Navbar.Collapse id="basic-navbar-nav">
