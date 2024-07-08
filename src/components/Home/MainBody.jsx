@@ -2,9 +2,12 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Typist from 'react-typist-component';
 import { Jumbotron } from "./migration";
+import { mainBody } from "../../editable-stuff/config";
 
 const MainBody = React.forwardRef(
-  ({ gradient, title, message, icons }, ref) => {
+  ({ gradient, icons }, ref) => {
+    const { firstName, lastName, message, styles } = mainBody;
+
     return (
       <Jumbotron
         fluid
@@ -17,11 +20,11 @@ const MainBody = React.forwardRef(
       >
         <div id="stars"></div>
         <Container className="text-center">
-          <h1 ref={ref} className="display-1">
-            {title}
+          <h1 ref={ref} className="display-4" style={{ fontSize: styles.nameFontSize }}>
+            {firstName} {lastName}
           </h1>
           <Typist>
-            <div className="lead typist">
+            <div className="lead typist" style={{ fontSize: styles.messageFontSize }}>
               {message}
             </div>
           </Typist>

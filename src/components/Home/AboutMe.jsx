@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Jumbotron } from "./migration";
 
@@ -7,10 +7,11 @@ const pictureLinkRegex = new RegExp(
 );
 
 const AboutMe = ({ heading, message, link, imgSize, imageHeight, resume }) => {
-  const [profilePicUrl, setProfilePicUrl] = React.useState("");
-  const [showPic, setShowPic] = React.useState(Boolean(link));
+  const [profilePicUrl, setProfilePicUrl] = useState("");
+  const [showPic, setShowPic] = useState(Boolean(link));
+  const [isHovered, setIsHovered] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleRequest = async () => {
       const instaLink = "https://www.instagram.com/";
       const instaQuery = "/?__a=1";
@@ -36,17 +37,18 @@ const AboutMe = ({ heading, message, link, imgSize, imageHeight, resume }) => {
         <div className="col-5 d-none d-lg-block align-self-center">
           {showPic && (
             <img
-              className="border border-secondary"
+              className="border border-secondary mb-3"
               src={profilePicUrl}
               alt="profilepicture"
               width={imgSize}
               height={imageHeight}
+              style={{ marginLeft: "70px" }} // Ajout de marginLeft pour déplacer la photo vers la droite
             />
           )}
         </div>
-        <div className={`col-lg-${showPic ? "7" : "12"}`}>
-          <h2 className="display-4 mb-5 text-center">{heading}</h2>
-          <p className="lead text-center">{message}</p>
+        <div className={`col-lg-${showPic ? "7" : "12"} align-self-center`}>
+          <h2 className="display-4 mb-3 text-center" style={{ marginRight: "100px" }}>{heading}</h2> {/* Ajout de marginRight */}
+          <p className="lead mb-3 text-center" style={{ marginRight: "80px" }}>{message}</p> {/* Ajout de marginRight */}
           {resume && (
             <p className="lead text-center">
               <a
@@ -56,8 +58,19 @@ const AboutMe = ({ heading, message, link, imgSize, imageHeight, resume }) => {
                 rel="noreferrer noopener"
                 role="button"
                 aria-label="Resume/CV"
+                style={{
+                  backgroundColor: isHovered ? "#000000" : "transparent",
+                  color: isHovered ? "#ffffff" : "#000000",
+                  border: "1px solid #000000",
+                  padding: "10px 20px",
+                  textDecoration: "none",
+                  transition: "background-color 0.3s, color 0.3s",
+                  marginRight: "40px" // Ajout de marginRight pour le bouton
+                }}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
               >
-                Resume
+                A Propos
               </a>
             </p>
           )}

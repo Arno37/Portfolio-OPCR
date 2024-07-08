@@ -1,29 +1,15 @@
-import React from "react";
-import Container from "react-bootstrap/Container";
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
-const Footer = (props) => {
-  const bgStyle = { backgroundColor: "#f5f5f5" };
-
+const Footer = () => {
   return (
-    <footer style={bgStyle} className="mt-auto py-5 text-center ">
+    <footer className="bg-dark text-light py-4">
       <Container>
-        {props.children}
-        <i className="fas fa-code" /> with <i className="fas fa-heart" /> by{" "}
-        <a
-          rel="noopener"
-          href="https://github.com/hashirshoaeb"
-          aria-label="My GitHub"
-        > <span className="badge bg-dark">
-            Hashir Shoaib
-          </span>
-        </a>{" "}
-        using <i className="fab fa-react" />
-        <p>
-          <small className="text-muted">
-            Project code is open source. Feel free to fork and make your own
-            version.
-          </small>
-        </p>
+        <Row>
+          <Col className="text-center">
+            <p className="mb-0">&copy; {new Date().getFullYear()} Arnaud Rambourg - Tous droits réservés</p>
+          </Col>
+        </Row>
       </Container>
     </footer>
   );

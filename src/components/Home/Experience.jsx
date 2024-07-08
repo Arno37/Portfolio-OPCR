@@ -1,12 +1,16 @@
+// Experience.js
 import React from 'react';
 import ExperienceCard from "./ExperienceCard";
 import { Jumbotron } from './migration';
-import {
-  Container,
-  Row,
-} from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 const Experience = ({ experiences }) => {
+  console.log('Experiences prop:', experiences); // Ajoutez ceci pour vérifier les données
+
+  if (!experiences.show) {
+    return null;
+  }
+
   return (
     <section className="section">
       <Container>
@@ -15,16 +19,14 @@ const Experience = ({ experiences }) => {
             {experiences.heading}
           </h2>
           <Row>
-            {
-              experiences.data.map((data, index) => {
-                return <ExperienceCard key={index} data={data} />
-              })
-            }
+            {experiences.data.map((data, index) => (
+              <ExperienceCard key={index} data={data} />
+            ))}
           </Row>
         </Jumbotron>
       </Container>
     </section>
   );
-}
+};
 
 export default Experience;
