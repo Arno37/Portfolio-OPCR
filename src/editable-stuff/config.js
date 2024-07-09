@@ -92,7 +92,7 @@ const getInTouch = {};
 
 const experiences = {
   show: true,
-  heading: "Experiences",
+  heading: "Expériences",
   data: [
     {
       role: "Certification de Développeur Web",
