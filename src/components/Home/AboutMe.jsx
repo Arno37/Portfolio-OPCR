@@ -47,8 +47,8 @@ const AboutMe = ({ heading, message, link, imgSize, imageHeight, resume }) => {
           )}
         </div>
         <div className={`col-lg-${showPic ? "7" : "12"} align-self-center`}>
-          <h2 className="display-4 mb-3 text-center" style={{ marginRight: "100px" }}>{heading}</h2> {/* Ajout de marginRight */}
-          <p className="lead mb-3 text-center" style={{ marginRight: "80px" }}>{message}</p> {/* Ajout de marginRight */}
+          <h2 className="display-4 mb-3 text-center">{heading}</h2> {/* Ajout de marginRight */}
+          <p className="lead mb-3 text-center">{message}</p> {/* Ajout de marginRight */}
           {resume && (
             <p className="lead text-center">
               <a

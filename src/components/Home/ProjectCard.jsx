@@ -1,45 +1,52 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React from "react";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Skeleton from "react-loading-skeleton";
 import axios from "axios";
+import LazyLoad from "react-lazyload";
 
 const ProjectCard = ({ value }) => {
   const { name, svn_url, languages_url } = value;
 
   return (
     <Col xs={12} sm={6} md={4} lg={3} className="mb-4">
-      <Card className="shadow-sm h-100">
-        <Card.Body>
-          <Card.Title as="h5">{name || <Skeleton />} </Card.Title>
-          
-          {svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />}
-          <hr />
-          {languages_url ? (
-            <Language languages_url={languages_url} />
-          ) : (
-            <Skeleton count={3} />
-          )}
-        </Card.Body>
-      </Card>
+      <LazyLoad height={200} once>
+        <Card className="shadow-sm h-100">
+          <Card.Body>
+            <Card.Title as="h5">{name || <Skeleton />}</Card.Title>
+
+            {svn_url ? (
+              <CardButtons svn_url={svn_url} />
+            ) : (
+              <Skeleton count={2} />
+            )}
+            <hr />
+            {languages_url ? (
+              <Language languages_url={languages_url} />
+            ) : (
+              <Skeleton count={3} />
+            )}
+          </Card.Body>
+        </Card>
+      </LazyLoad>
     </Col>
   );
 };
 
 const CardButtons = ({ svn_url }) => (
   <div className="d-grid gap-2 d-md-block mt-3">
-   <a
-  href={svn_url}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="btn btn-outline-secondary"
-  style={{ marginBottom: "0.5rem" }} /* Style inline pour ajouter un espacement en bas */
->
-  <i className="fab fa-github" /> Repo GitHub
-</a>
+    <a
+      href={svn_url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn btn-outline-secondary"
+      style={{ marginBottom: "0.5rem" }}
+    >
+      <i className="fab fa-github" /> Repo GitHub
+    </a>
     <a
       href={`${svn_url}/archive/master.zip`}
-      className="btn btn-outline-secondary mb-2" /* Ajout de la classe 'mb-2' pour l'espacement */
+      className="btn btn-outline-secondary mb-2"
     >
       <i className="fab fa-github" /> Téléchargement du projet
     </a>
@@ -47,20 +54,21 @@ const CardButtons = ({ svn_url }) => (
 );
 
 const Language = ({ languages_url }) => {
-  const [data, setData] = useState({});
+  const [data, setData] = React.useState({});
 
-  const fetchLanguages = useCallback(async () => {
-    try {
-      const response = await axios.get(languages_url);
-      setData(response.data);
-    } catch (error) {
-      console.error(error.message);
-    }
-  }, [languages_url]);
+  React.useEffect(() => {
+    const fetchLanguages = async () => {
+      try {
+        const response = await axios.get(languages_url);
+        setData(response.data);
+      } catch (error) {
+        console.error(`Error fetching languages: ${error.message}`);
+        // Handle error or set a default state for data
+      }
+    };
 
-  useEffect(() => {
     fetchLanguages();
-  }, [fetchLanguages]);
+  }, [languages_url]);
 
   const getLanguagePercentage = (language) => {
     const total = Object.values(data).reduce((acc, curr) => acc + curr, 0);
@@ -88,14 +96,14 @@ const Language = ({ languages_url }) => {
       Langages:{" "}
       {Object.keys(data).length ? (
         Object.keys(data).map((language) => (
-          <span key={language} style={{ marginRight: '0.5rem' }}>
+          <span key={language} style={{ marginRight: "0.5rem" }}>
             <span
               style={{
-                width: '10px',
-                height: '10px',
-                borderRadius: '50%',
-                display: 'inline-block',
-                marginRight: '0.5rem',
+                width: "10px",
+                height: "10px",
+                borderRadius: "50%",
+                display: "inline-block",
+                marginRight: "0.5rem",
                 backgroundColor: getColorForLanguage(language),
               }}
             ></span>
