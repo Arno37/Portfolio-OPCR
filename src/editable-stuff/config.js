@@ -46,40 +46,16 @@ const repos = {
   specificRepos: [],
 };
 
-const leadership = {
-  show: false,
-  heading: "Leadership",
-  message:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare.",
-  images: [
-    {
-      img: imageLink,
-      label: "First slide label",
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
-    },
-    {
-      img: imageLink,
-      label: "Second slide label",
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
-    },
-  ],
-  imageSize: {
-    width: "375",
-    height: "375",
-  },
-};
-
 const skills = {
   show: true,
   heading: "Skills",
   hardSkills: [
-    { name: "HTML/CSS", logo: "html-css-logo.png", value: 35 },
-    { name: "JavaScript", logo: "javascript-logo.png", value: 20 },
-    { name: "React", logo: "react-logo.png", value: 22 },
-    { name: "Node.js", logo: "nodejs-logo.png", value: 35 },
-    { name: "MongoDB", logo: "mongodb-logo.png", value: 30 },
+    { name: "HTML/CSS", value: 35 },
+    { name: "JavaScript", value: 20 },
+    { name: "React", value: 22 },
+    { name: "Node.js", value: 35 },
+    { name: "MongoDB", value: 30 },
   ],
-
   softSkills: [
     { name: "Positif", value: 80 },
     { name: "Résilient", value: 82 },
@@ -108,4 +84,4 @@ const experiences = {
   ],
 };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, about, repos, skills, getInTouch, experiences };
