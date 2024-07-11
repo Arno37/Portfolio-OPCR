@@ -42,6 +42,4 @@ This project reflects my continuous learning and hands-on experience in web deve
 
 ## License
 
-The portfolio project is licensed under [insert your chosen license here] to encourage collaboration and reuse, with proper attribution and adherence to licensing terms.
-
 These summaries should provide a clear and concise overview of your portfolio project from various aspects, tailored to showcase your skills and achievements effectively.
