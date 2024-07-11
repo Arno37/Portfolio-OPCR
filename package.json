@@ -4,6 +4,8 @@
     "homepage": "https://Arno37.github.io/Portfolio-OPCR",
     "version": "2.0.0",
     "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.5.2",
+        "@fortawesome/free-brands-svg-icons": "^6.5.2",
         "@testing-library/jest-dom": "^5.16.5",
         "@testing-library/react": "^13.3.0",
         "@testing-library/user-event": "^13.5.0",

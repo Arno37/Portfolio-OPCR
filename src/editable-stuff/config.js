@@ -73,12 +73,13 @@ const skills = {
   show: true,
   heading: "Skills",
   hardSkills: [
-    { name: "HTML/CSS", value: 35 },
-    { name: "JavaScript", value: 20 },
-    { name: "React", value: 22 },
-    { name: "Node.js", value: 35 },
-    { name: "MongoDB", value: 30 },
+    { name: "HTML/CSS", logo: "html-css-logo.png", value: 35 },
+    { name: "JavaScript", logo: "javascript-logo.png", value: 20 },
+    { name: "React", logo: "react-logo.png", value: 22 },
+    { name: "Node.js", logo: "nodejs-logo.png", value: 35 },
+    { name: "MongoDB", logo: "mongodb-logo.png", value: 30 },
   ],
+
   softSkills: [
     { name: "Positif", value: 80 },
     { name: "Résilient", value: 82 },
