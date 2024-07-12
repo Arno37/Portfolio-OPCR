@@ -35,7 +35,7 @@ const about = {
   imageLink: imageLink,
   imageSize: 160,
   message:
-    "Développeur web junior récemment formé, je possède une expertise en communication efficace et empathique. Je suis spécialisé dans la résolution de problèmes techniques et non techniques, avec une capacité éprouvée à gérer les situations critiques. Mon engagement envers l'apprentissage continu et mon enthousiasme pour contribuer efficacement à des projets font de moi un atout précieux pour votre équipe.",
+    "Je me suis lancé un défi audacieux en effectuant une reconversion professionnelle dans le développement web. Animé par une soif d'apprentissage et une curiosité aiguë, j'ai décidé d'explorer cet univers fascinant. J'ai donc entrepris une formation intensive de développeur web chez Openclassrooms. Au cours de cette aventure, j'ai pu mettre en pratique mes compétences en créant une série de projets innovants, tous réunis dans ce portfolio.",
 };
 
 const repos = {
