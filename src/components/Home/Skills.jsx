@@ -10,21 +10,18 @@ import { useScrollPosition } from "../../hooks/useScrollPosition";
 const Skills = React.forwardRef(({ heading, hardSkills, softSkills }, ref) => {
   const skillsTabRef = React.useRef(null);
   const [isScrolled, setIsScrolled] = React.useState(false);
-  //const navbarDimensions = useResizeObserver(navbarMenuRef);
 
   useScrollPosition(
-    ({ prevPos, currPos }) => {
+    ({ currPos }) => {
       if (!isScrolled && currPos.y - 400 < 0) setIsScrolled(true);
     },
-    [],
-    skillsTabRef
+    [isScrolled]
   );
+
   return (
     <Jumbotron ref={skillsTabRef} fluid className="bg-white m-0" id="skills">
-      <Container className="p-5 ">
-        <h2 ref={skillsTabRef} className="display-4 pb-5 text-center">
-          {heading}
-        </h2>
+      <Container className="p-5">
+        <h2 className="display-4 pb-5 text-center">{heading}</h2>
         <Tabs
           className="skills-tabs"
           defaultActiveKey="hard-skills"
@@ -37,7 +34,7 @@ const Skills = React.forwardRef(({ heading, hardSkills, softSkills }, ref) => {
             title="Compétences Techniques"
           >
             <Row className="pt-3 px-1">
-              <SkillsTab skills={hardSkills} isScrolled={isScrolled} />
+              <SkillsTabMemo skills={hardSkills} isScrolled={isScrolled} />
             </Row>
           </Tab>
           <Tab
@@ -46,7 +43,7 @@ const Skills = React.forwardRef(({ heading, hardSkills, softSkills }, ref) => {
             title="Compétences Relationnelles"
           >
             <Row className="pt-3 px-1">
-              <SkillsTab skills={softSkills} isScrolled={isScrolled} />
+              <SkillsTabMemo skills={softSkills} isScrolled={isScrolled} />
             </Row>
           </Tab>
         </Tabs>
@@ -54,5 +51,7 @@ const Skills = React.forwardRef(({ heading, hardSkills, softSkills }, ref) => {
     </Jumbotron>
   );
 });
+
+const SkillsTabMemo = React.memo(SkillsTab);
 
 export default Skills;

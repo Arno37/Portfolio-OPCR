@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Skeleton from "react-loading-skeleton";
@@ -54,9 +54,10 @@ const CardButtons = ({ svn_url }) => (
 );
 
 const Language = ({ languages_url }) => {
-  const [data, setData] = React.useState({});
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const fetchLanguages = async () => {
       try {
         const response = await axios.get(languages_url);
@@ -64,10 +65,14 @@ const Language = ({ languages_url }) => {
       } catch (error) {
         console.error(`Error fetching languages: ${error.message}`);
         // Handle error or set a default state for data
+      } finally {
+        setLoading(false);
       }
     };
 
-    fetchLanguages();
+    if (languages_url) {
+      fetchLanguages();
+    }
   }, [languages_url]);
 
   const getLanguagePercentage = (language) => {
@@ -94,25 +99,25 @@ const Language = ({ languages_url }) => {
   return (
     <div className="pb-3">
       Langages:{" "}
-      {Object.keys(data).length ? (
-        Object.keys(data).map((language) => (
-          <span key={language} style={{ marginRight: "0.5rem" }}>
-            <span
-              style={{
-                width: "10px",
-                height: "10px",
-                borderRadius: "50%",
-                display: "inline-block",
-                marginRight: "0.5rem",
-                backgroundColor: getColorForLanguage(language),
-              }}
-            ></span>
-            {language}: {getLanguagePercentage(language)} %
-          </span>
-        ))
-      ) : (
-        "projet sans codes"
-      )}
+      {loading
+        ? "Chargement..."
+        : Object.keys(data).length
+        ? Object.keys(data).map((language) => (
+            <span key={language} style={{ marginRight: "0.5rem" }}>
+              <span
+                style={{
+                  width: "10px",
+                  height: "10px",
+                  borderRadius: "50%",
+                  display: "inline-block",
+                  marginRight: "0.5rem",
+                  backgroundColor: getColorForLanguage(language),
+                }}
+              ></span>
+              {language}: {getLanguagePercentage(language)} %
+            </span>
+          ))
+        : "projet sans codes"}
     </div>
   );
 };

@@ -1,4 +1,5 @@
 // Constantes réutilisées
+
 const socialLinks = [
   {
     image: "fa-github",
@@ -10,7 +11,7 @@ const socialLinks = [
   },
 ];
 
-const imageLink = require("../editable-stuff/self.webp");
+const imageLink = require("../assets/self.webp");
 
 // Sections du site
 const navBar = {
@@ -18,7 +19,7 @@ const navBar = {
 };
 
 const mainBody = {
-  gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
+  gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f",
   firstName: "Arnaud",
   middleName: "",
   lastName: "Rambourg",

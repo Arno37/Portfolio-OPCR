@@ -22,15 +22,17 @@ const Leadership = ({ heading, message, img, imageSize }) => {
                   <img
                     className="d-block w-100"
                     src={value.img}
-                    alt="First slide"
+                    alt={value.label}
                     width={imageSize.width}
                     height={imageSize.height}
+                    style={{
+                      objectFit: "cover", // Assure le remplissage complet de l'image
+                      maxHeight: `${imageSize.height}px`, // Limite la hauteur si nécessaire
+                    }}
                   />
                   <Carousel.Caption>
                     <h3>{value.label}</h3>
-                    <p>
-                      {value.paragraph}
-                    </p>
+                    <p>{value.paragraph}</p>
                   </Carousel.Caption>
                 </Carousel.Item>
               );

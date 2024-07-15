@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {
   navBar,
@@ -15,12 +15,10 @@ import Project from "./components/home/Project.jsx";
 import Footer from "./components/Footer.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Skills from "./components/home/Skills.jsx";
-// import { Blog } from "./components/blog/Blog";
-// import BlogPost from "./components/blog/BlogPost";
 import GetInTouch from "./components/home/GetInTouch.jsx";
 import Experience from "./components/home/Experience.jsx";
 
-const Home = React.forwardRef((props, ref) => {
+const Home = React.forwardRef(({ isMenuOpen }, ref) => {
   return (
     <>
       <MainBody
@@ -28,6 +26,7 @@ const Home = React.forwardRef((props, ref) => {
         title={`${mainBody.firstName} ${mainBody.middleName} ${mainBody.lastName}`}
         message={mainBody.message}
         icons={mainBody.icons}
+        isMenuOpen={isMenuOpen}
         ref={ref}
       />
       {about.show && (
@@ -36,14 +35,14 @@ const Home = React.forwardRef((props, ref) => {
           message={about.message}
           link={about.imageLink}
           imgSize={about.imageSize}
-          
         />
       )}
-      {
-        experiences.show && (
-          <Experience experiences={experiences}/>
-        )
-      }
+      {experiences.show && (
+        <Experience 
+        experiences={experiences}
+        heading={experiences.heading}/>
+       
+      )}
       {repos.show && (
         <Project
           heading={repos.heading}
@@ -59,29 +58,23 @@ const Home = React.forwardRef((props, ref) => {
           softSkills={skills.softSkills}
         />
       )}
-      
     </>
   );
 });
 
 const App = () => {
-  const titleRef = React.useRef();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const titleRef = useRef();
 
   return (
     <BrowserRouter basename="/PORTFOLIO-OPCR">
-      {navBar.show && <Navbar ref={titleRef} />}
+      {navBar.show && <Navbar ref={titleRef} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
       <Routes>
-        <Route path="/" exact element={<Home ref={titleRef} />} />
+        <Route path="/" exact element={<Home ref={titleRef} isMenuOpen={isMenuOpen} />} />
       </Routes>
-      {/* {false && <Route path="/blog" exact component={Blog} />}
-      {false && <Route path="/blog/:id" component={BlogPost} />} */}
       <Footer>
         {getInTouch.show && (
-          <GetInTouch
-            heading={getInTouch.heading}
-            message={getInTouch.message}
-            email={getInTouch.email}
-          />
+          <GetInTouch/>
         )}
       </Footer>
     </BrowserRouter>

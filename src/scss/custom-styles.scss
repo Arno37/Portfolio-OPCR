@@ -1,1 +1,19 @@
-.lead{font-size:px}.navbar-nav{display:flex;align-items:center}.nav-item{padding:0 5px;font-size:18px}.navbar-brand{padding:0 15px;font-size:18px}.experience-logo{max-width:50px;margin:0 auto;display:block}
+.lead{font-size:px}.navbar-nav{display:flex;align-items:flex-end}.nav-item{padding:0 5px;font-size:18px}.experience-logo{max-width:50px;margin:0 auto;display:block}.navbar-semi-transparent{background-color:rgb(255 255 255 / .3)!important;box-shadow:0 4px 6px rgb(0 0 0 / .1)}.navbar-transparent{background-color:transparent!important;box-shadow:none}.lead{font-size:16px}.navbar-nav{display:flex;align-items:flex-end}.nav-item{padding:0 5px;font-size:18px}.experience-logo{max-width:50px;margin:0 auto;display:block}
+.technology-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; // Centrer horizontalement les icônes
+  }
+  
+  .tech-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .tech-icon > svg {
+    margin-bottom: 5px; // Espacement entre l'icône et le texte
+  }
+  

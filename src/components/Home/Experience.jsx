@@ -1,11 +1,10 @@
-// Experience.js
 import React from 'react';
 import ExperienceCard from "./ExperienceCard";
 import { Jumbotron } from './migration';
 import { Container, Row } from "react-bootstrap";
 
 const Experience = ({ experiences }) => {
-  console.log('Experiences prop:', experiences); // Ajoutez ceci pour vérifier les données
+  console.log('Experiences prop:', experiences); // Ajout pour vérifier les données
 
   if (!experiences.show) {
     return null;
