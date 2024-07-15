@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
-import openclassroomsLogo from '../../editable-stuff/Logo_OpenClassrooms.webp';
-import bouyguesTelecomLogo from '../../editable-stuff/bt.webp';
+import openclassroomsLogo from '../../assets/Logo_OpenClassrooms.webp';
+import bouyguesTelecomLogo from '../../assets/bt.webp';
 import '../../scss/custom-styles.scss';
 
 const ExperienceCard = ({ data }) => {
