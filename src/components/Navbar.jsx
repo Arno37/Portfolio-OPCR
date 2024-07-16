@@ -55,7 +55,7 @@ const Navigation = React.memo(({ isMenuOpen, setIsMenuOpen }) => {
         <Nav className="mr-auto">
           {about.show && (
             <NavLink className="nav-item nav-link-wrapper" href={process.env.PUBLIC_URL + "/#aboutme"}>
-              A Propos
+              A Propos/Expériences
             </NavLink>
           )}
 
