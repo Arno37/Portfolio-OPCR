@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { useScrollPosition } from "../../src/hooks/useScrollPosition.js";
 import useResizeObserver from "../../src/hooks/useResizeObserver.js";
-import { repos, about, skills } from "../../src/editable-stuff/config.js";
+import { repos, about, skills, experiences } from "../../src/editable-stuff/config.js";
 import { NavLink } from "./home/migration.jsx";
 
 const Navigation = React.memo(({ isMenuOpen, setIsMenuOpen }) => {
@@ -55,7 +55,12 @@ const Navigation = React.memo(({ isMenuOpen, setIsMenuOpen }) => {
         <Nav className="mr-auto">
           {about.show && (
             <NavLink className="nav-item nav-link-wrapper" href={process.env.PUBLIC_URL + "/#aboutme"}>
-              A Propos/Expériences
+              A Propos
+            </NavLink>
+          )}
+            {experiences.show && (
+            <NavLink className="nav-item nav-link-wrapper" href={process.env.PUBLIC_URL + "/#experience"}>
+              Expériences
             </NavLink>
           )}
 
