@@ -1,6 +1,6 @@
 const ghpages = require("gh-pages");
 const pathname = `${__dirname}/build`;
-const repoURL = "https://arno37.github.io/Portfolio-OPCR/";
+const repoURL = "https://github.com/Arno37/Arno37.github.io.git";
 
 ghpages.publish(
   pathname,
