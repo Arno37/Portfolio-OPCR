@@ -36,7 +36,7 @@ const about = {
   imageLink: imageLink,
   imageSize: 160,
   message:
-    "Je me suis lancé un défi audacieux en effectuant une reconversion professionnelle dans le développement web. Animé par une soif d'apprentissage et une curiosité aiguë, j'ai décidé d'explorer cet univers fascinant. J'ai donc entrepris une formation intensive de développeur web chez Openclassrooms. Au cours de cette aventure, j'ai adoré prendre part à des projets captivants et mettre en pratique mes compétences en créant une série de projets innovants, tous réunis dans ce portfolio."
+    "Je me suis lancé un défi audacieux en effectuant une reconversion professionnelle dans le développement web. Animé par une soif d'apprentissage et une curiosité aigüe décidé d'explorer cet univers fascinant. J'ai donc entrepris une formation intensive de développeur web chez Openclassrooms. Au cours de cette aventure, j'ai grandement apprécié prendre part à des projets captivants et mettre en pratique mes compétences en créant une série de projets innovants, tous réunis dans mon portfolio."
 };
 
 const repos = {
