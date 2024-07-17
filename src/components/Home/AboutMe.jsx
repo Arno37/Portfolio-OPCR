@@ -44,8 +44,8 @@ const AboutMe = ({ heading, message, link, imgSize, imageHeight, resume, isMenuO
             />
           )}
         </div>
-        <div className={`col-lg-${showPic ? "7" : "12"} align-self-center`}>
-          <h2 className="display-4 mb-3 text-center">{heading}</h2>
+        <div className={`col-lg-${showPic ? "7" : "12"} align-self-center mobile-margin-left`}>
+          <h2 className="display-4 mb-3 text-center mobile-margin-left">{heading}</h2>
           <p className="lead mb-3 text-center">{message}</p>
           {resume && (
             <p className="lead text-center">
