@@ -46,33 +46,8 @@ These summaries should provide a clear and concise overview of your portfolio pr
 
 ## Présenter au moins 2 projets sur lesquels vous avez travaillé, durant votre formation ou ailleurs. Pour chaque projet, il faudra afficher :
 
-    PROJET 1 
-    
-    Débuggez et optimisez un site de photographe_NINA-CARDUCCI
-    
-    1/ Courte Description de la Réalisation:
-    Pour le site Nina Carducci, j'ai réalisé une optimisation globale pour améliorer ses performances, son référencement SEO, et son accessibilité.
+   Projet 1
 
-    2/ Problématiques Rencontrées et Solutions
-    Problématiques rencontrées:
-    --> Temps de chargement élevé : Les images sur le site étaient trop lourdes, ralentissant le temps de chargement des pages.
-    --> Structure du code désordonnée : Le code HTML, CSS et JavaScript n'était pas optimisé, ce qui compliquait la maintenance et l'extension du site.
-    --> Accessibilité : Des erreurs d'accessibilité rendaient le site difficile à naviguer pour les utilisateurs ayant des handicaps.
-    --> Bugs dans la galerie : Les fonctionnalités de navigation dans la galerie d'images ne fonctionnaient pas correctement.
-
-    Solutions apportées :
-    --> Optimisation des images : Compression et redimensionnement des images pour réduire leur taille
-    --> Réorganisation du code : Restructuratin du code en utilisant les meilleures pratiques de développement web, y compris la minification des fichiers CSS et JavaScript.
-    --> Audit d'accessibilité : Utilisation de l'outil Wave pour identifier et corriger les problèmes d'accessibilité.
-    --> Correction des bugs : J'ai corrigé le code JavaScript pour la navigation dans la galerie et ajusté les styles CSS pour indiquer visuellement la catégorie sélectionnée.
-
-    Compétences développées : 
-    --> Amélioration de mes compétences en compression d'images et en optimisation du code pour des temps de chargement plus rapides.
-    --> Approfondissement de mes connaissances en SEO local en utilisant des données structurées avec Schema.org.
-    --> Acquisition d' une meilleure compréhension des critères d'accessibilité et des outils comme Wave
-    --> La correction des bugs dans la galerie d'images m'a permis d'améliorer mes compétences en JavaScript et en CSS.
-
-    [**-->website<--**](https://arno37.github.io/Nina_Carducci/) 
-    [**-->Github<--**](https://github.com/Arno37/Nina_Carducci)
+   Débuggez et optimisez un site de photographe
 
     
