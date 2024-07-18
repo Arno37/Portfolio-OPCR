@@ -44,7 +44,9 @@ This project reflects my continuous learning and hands-on experience in web deve
 
 These summaries should provide a clear and concise overview of your portfolio project from various aspects, tailored to showcase your skills and achievements effectively.
 
- PROJET 1 
+## Présenter au moins 2 projets sur lesquels vous avez travaillé, durant votre formation ou ailleurs. Pour chaque projet, il faudra afficher :
+
+    PROJET 1 
     
     Débuggez et optimisez un site de photographe_NINA-CARDUCCI
     
@@ -72,3 +74,5 @@ These summaries should provide a clear and concise overview of your portfolio pr
 
     [**-->website<--**](https://arno37.github.io/Nina_Carducci/) 
     [**-->Github<--**](https://github.com/Arno37/Nina_Carducci)
+
+    
