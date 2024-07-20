@@ -30,7 +30,7 @@ To view my portfolio locally, simply clone the repository from GitHub and follow
 
 ## Install Dependencies
 
-Before running the portfolio locally, ensure all dependencies are installed by running npm install or yarn install, depending on your package manager.
+Before running the portfolio locally, ensure all dependencies are installed by running `npm install` or `yarn install`, depending on your package manager.
 
 ## Development
 
@@ -44,10 +44,12 @@ This project reflects my continuous learning and hands-on experience in web deve
 
 These summaries should provide a clear and concise overview of your portfolio project from various aspects, tailored to showcase your skills and achievements effectively.
 
-## 2 projets mis en avant:
+## <u>2 projets mis en avant:</u>
 
-## Projet 1/ Développement du Back-End du Site Mon Vieux Grimoire
-![Mon Vieux Grimoire](./src/assets/monvieuxgrimoire.webp)
+## <u>Projet 1/ Développement du Back-End du Site Mon Vieux Grimoire</u>
+<p align="center">
+  <img src="./src/assets/monvieuxgrimoire.webp" alt="Mon Vieux Grimoire" width="500"/>
+</p>
 
 #### 1. Courte Description de la Réalisation
 
@@ -69,17 +71,22 @@ Pour le projet "Mon Vieux Grimoire", j'ai développé le back-end du site de not
 
 #### 3. Compétences Développées
 
-- **Développement de serveurs avec Express** : Amélioration de ma capacité à créer et structurer des serveurs Node.js avec Express, en suivant une architecture MVC.
-- **Utilisation de MongoDB et Mongoose** : Approfondissement de mes compétences en modélisation de données avec Mongoose et en gestion de bases de données MongoDB.
-- **Sécurité des applications web** : Renforcement de mes connaissances en implémentation de systèmes d'authentification sécurisés avec JWT et bcrypt.
-- **Optimisation des ressources web** : Acquisition d'une meilleure compréhension des techniques d'optimisation des images pour améliorer les performances.
+➜ **Développement de serveurs avec Express** : Amélioration de ma capacité à créer et structurer des serveurs Node.js avec Express, en suivant une architecture MVC.
+
+➜ **Utilisation de MongoDB et Mongoose** : Approfondissement de mes compétences en modélisation de données avec Mongoose et en gestion de bases de données MongoDB.
+
+➜ **Sécurité des applications web** : Renforcement de mes connaissances en implémentation de systèmes d'authentification sécurisés avec JWT et bcrypt.
+
+➜ **Optimisation des ressources web** : Acquisition d'une meilleure compréhension des techniques d'optimisation des images pour améliorer les performances.
 
 ### Lien
 
 - **Lien vers le repo GitHub du code back-end** : [GitHub Repo](https://github.com/Arno37/Mon_Vieux_Grimoire)
 
-## Projet 2/ Développement du Front-End de l'Application avec React
-![Kasa logo](/src/assets/Kasa%20logo.png)
+## <u>Projet 2/ Développement du Front-End de l'Application avec React</u>
+<p align="center">
+  <img src="./src/assets/Kasa%20logo.png" alt="Kasa" width="500"/>
+</p>
 
 #### 1. Courte Description de la Réalisation
 
@@ -99,30 +106,17 @@ Dans ce projet, j'ai implémenté le front-end d'une application en utilisant Re
 - **Logique de navigation circulaire** : Pour la galerie, j'ai implémenté une logique permettant de revenir à la première image depuis la dernière et inversement, en utilisant des conditions dans le composant Gallery.
 - **Style CSS et propriétés flexbox** : Pour maintenir une hauteur constante et centrer les images dans la galerie, j'ai utilisé des propriétés CSS telles que `object-fit` et des conteneurs flexbox.
 
-
 #### 3. Compétences Développées
 
 ➜ **Développement d'interfaces utilisateur avec React** : Approfondissement de mes connaissances en développement de composants React, en gestion de l'état et des props, ainsi qu'en application des meilleures pratiques de conception d'interfaces utilisateur.
 
 ➜ **Routage avec React Router** : Acquisition d'une meilleure compréhension de la configuration et de la gestion du routage dans une application React, permettant une navigation fluide entre les différentes pages.
 
-➜ **Intégration de maquettes Figma** : Amélioration de mes compétences en intégration de maquettes de design, en exportant et utilisant les ressources Figma
+➜ **Intégration de maquettes Figma** : Amélioration de mes compétences en intégration de maquettes de design, en exportant et utilisant les ressources Figma.
 
-➜ **Optimisation des composants interactifs** : Développement des compétences dans la création et l'optimisation de composants interactifs, tels que les galeries d'images et les menus déroulants, en assurant qu'ils fonctionnent selon les attentes et de manière performante
+➜ **Optimisation des composants interactifs** : Développement des compétences dans la création et l'optimisation de composants interactifs, tels que les galeries d'images et les menus déroulants, en assurant qu'ils fonctionnent selon les attentes et de manière performante.
 
-### Livrables
+### Liens
 
 ➜ **Lien vers le site** : [website](https://arno37.github.io/Kasa/)
-➜ **Lien vers le repo GitHub** :[GitHub Repo](https://github.com/Arno37/Kasa)
-
-
-
-
-
-
-    
-
-    
-
-
-    
+➜ **Lien vers le repo GitHub** : [GitHub Repo](https://github.com/Arno37/Kasa)
