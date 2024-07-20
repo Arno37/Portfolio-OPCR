@@ -47,7 +47,7 @@ These summaries should provide a clear and concise overview of your portfolio pr
 ## 2 projets mis en avant:
 
 ## Projet 1/ Développement du Back-End du Site Mon Vieux Grimoire
-![Mon Vieux Grimoire](./src/assets/monvieuxgrimoire.jpg)
+![Mon Vieux Grimoire](./src/assets/monvieuxgrimoire.webp)
 
 #### 1. Courte Description de la Réalisation
 
