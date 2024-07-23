@@ -36,7 +36,7 @@ const about = {
   imageLink: imageLink,
   imageSize: 160,
   message:
-    "Je me suis lancé un défi audacieux en effectuant une reconversion professionnelle dans le développement web. Animé par une soif d'apprentissage et une curiosité aigüe, j'ai décidé d'explorer cet univers fascinant. J'ai donc entrepris une formation intensive de développeur web auprès de l'organisme Openclassrooms. Au cours de cette aventure, j'ai grandement apprécié prendre part à des projets captivants et mettre en pratique mes compétences en créant une série de projets innovants, tous réunis dans mon portfolio."
+    "Faisant preuve d'audace et de détermination, j'ai relevé le défi d'une transition de carrière ambitieuse vers le secteur du développement web. Animé par une passion pour l'apprentissage continu et une curiosité sans faille, j'ai investi dans une formation intensive chez Openclassrooms pour maîtriser les compétences nécessaires dans ce domaine. Cette aventure éducative m'a ouvert les portes à des projets captivants et m'a permis d'affiner mon expertise technique. Mon portfolio, que je vous invite à découvrir, témoigne de ma rigueur et de mon aptitude à créer des solutions web innovantes."
 };
 
 const repos = {
