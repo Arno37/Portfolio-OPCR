@@ -11,7 +11,7 @@ const socialLinks = [
   },
 ];
 
-const imageLink = require("../assets/self.webp");
+const imageLink = require("../assets/image.webp");
 
 // Sections du site
 const navBar = {
