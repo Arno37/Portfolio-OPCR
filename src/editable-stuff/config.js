@@ -23,7 +23,7 @@ const mainBody = {
   firstName: "Arnaud",
   middleName: "",
   lastName: "Rambourg",
-  message: "Développeur Web",
+  message: "Développeur Full-Stack junior",
   icons: socialLinks,
   styles: {
     messageFontSize: "24px",
