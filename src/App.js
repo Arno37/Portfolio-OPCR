@@ -54,7 +54,7 @@ const Home = React.forwardRef(({ isMenuOpen }, ref) => {
       {skills.show && (
         <Skills
           heading={skills.heading}
-          hardSkills={skills.hardSkills}
+          
           softSkills={skills.softSkills}
         />
       )}
@@ -80,5 +80,6 @@ const App = () => {
     </BrowserRouter>
   );
 };
+
 
 export default App;

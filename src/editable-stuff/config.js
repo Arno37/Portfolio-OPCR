@@ -36,7 +36,10 @@ const about = {
   imageLink: imageLink,
   imageSize: 160,
   message:
-    "Faisant preuve d'audace et de détermination, j'ai relevé le défi d'une transition de carrière ambitieuse vers le secteur du développement web. Animé par une passion pour l'apprentissage continu et une curiosité sans faille, j'ai investi dans une formation intensive chez Openclassrooms pour maîtriser les compétences nécessaires dans ce domaine. Cette aventure éducative m'a ouvert les portes à des projets captivants et m'a permis d'affiner mon expertise technique. Mon portfolio, que je vous invite à découvrir, témoigne de ma rigueur et de mon aptitude à créer des solutions web innovantes."
+    "Après une carrière très enrichissante de 16 ans chez Bouygues Telecom, j’ai réorienté mon avenir professionnel vers le développement web grâce à une formation certifiante avec OpenClassrooms. " +
+    "Cette transition m'a permis d'acquérir une compréhension des principes du développement web, tout en valorisant une expertise unique : mes compétences en relation clients et télécommunications. " +
+    "Ma solide expérience me permet de gérer efficacement les attentes des utilisateurs, d'identifier rapidement leurs besoins et de résoudre les problèmes de manière proactive. " +
+    "Je suis en recherche active d'un poste de Développeur Web Full-Stack junior pour appliquer ces compétences interpersonnelles et techniques. Mon portfolio en ligne illustre des projets concrets où j'ai intégré une compréhension approfondie des besoins utilisateurs."
 };
 
 const repos = {
@@ -51,20 +54,23 @@ const skills = {
   show: true,
   heading: "Skills",
   hardSkills: [
-    { name: "HTML/CSS", value: 35 },
-    { name: "JavaScript", value: 20 },
-    { name: "React", value: 22 },
-    { name: "Node.js", value: 35 },
-    { name: "MongoDB", value: 30 },
+    { name: "HTML/CSS" },
+    { name: "JavaScript" },
+    { name: "React" },
+    { name: "Node.js" },
+    { name: "MongoDB" },
   ],
   softSkills: [
     { name: "Positif", value: 80 },
     { name: "Résilient", value: 82 },
     { name: "Curieux", value: 75 },
     { name: "Autonome", value: 85 },
-    { name: "Persévérant", value: 84 },
+    { name: "Persévérant", value: 90 },
+    { name: "Rigoureux", value: 84 },
   ],
 };
+
+
 
 const getInTouch = {};
 

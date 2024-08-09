@@ -7,7 +7,7 @@ import { Jumbotron } from "./migration";
 import { Container } from "react-bootstrap";
 import { useScrollPosition } from "../../hooks/useScrollPosition";
 
-const Skills = React.forwardRef(({ heading, hardSkills, softSkills }, ref) => {
+const Skills = React.forwardRef(({ heading, softSkills }, ref) => {
   const skillsTabRef = React.useRef(null);
   const [isScrolled, setIsScrolled] = React.useState(false);
 
@@ -28,15 +28,7 @@ const Skills = React.forwardRef(({ heading, hardSkills, softSkills }, ref) => {
           id="skills-tabs"
           fill
         >
-          <Tab
-            tabClassName="skills-tab lead"
-            eventKey="hard-skills"
-            title="Compétences Techniques"
-          >
-            <Row className="pt-3 px-1">
-              <SkillsTabMemo skills={hardSkills} isScrolled={isScrolled} />
-            </Row>
-          </Tab>
+          
           <Tab
             tabClassName="skills-tab lead"
             eventKey="soft-skills"
