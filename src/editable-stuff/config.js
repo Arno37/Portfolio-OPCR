@@ -23,7 +23,7 @@ const mainBody = {
   firstName: "Arnaud",
   middleName: "",
   lastName: "Rambourg",
-  message: "Développeur Full-Stack junior",
+  message: "Développeur Web | Développeur Data IA",
   icons: socialLinks,
   styles: {
     messageFontSize: "24px",
@@ -39,7 +39,7 @@ const about = {
     "Après une carrière très enrichissante de 16 ans chez Bouygues Telecom, j’ai réorienté mon avenir professionnel vers le développement web grâce à une formation certifiante avec OpenClassrooms. " +
     "Cette transition m'a permis d'acquérir une compréhension des principes du développement web, tout en valorisant une expertise unique : mes compétences en relation clients et télécommunications. " +
     "Ma solide expérience me permet de gérer efficacement les attentes des utilisateurs, d'identifier rapidement leurs besoins et de résoudre les problèmes de manière proactive. " +
-    "Je suis en recherche active d'un poste de Développeur Web Full-Stack junior pour appliquer ces compétences interpersonnelles et techniques. Mon portfolio en ligne illustre des projets concrets où j'ai intégré une compréhension approfondie des besoins utilisateurs."
+    "Mon portfolio en ligne illustre des projets concrets où j'ai intégré une compréhension approfondie des besoins utilisateurs."
 };
 
 const repos = {
@@ -78,6 +78,11 @@ const experiences = {
   show: true,
   heading: "Expériences",
   data: [
+    {
+      role: "En formation de Développeur Data IA en alternance",
+      company: "Simplon",
+      date: "Novembre 2024 – Septembre 2026",
+    },
     {
       role: "Certification de Développeur Web",
       company: "OpenClassrooms",

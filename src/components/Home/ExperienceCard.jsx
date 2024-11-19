@@ -2,6 +2,7 @@ import React from 'react';
 import { Col } from 'react-bootstrap';
 import openclassroomsLogo from '../../assets/Logo_OpenClassrooms.webp';
 import bouyguesTelecomLogo from '../../assets/bt.webp';
+import simplonlogo from '../../assets/simplon.png';
 import '../../scss/custom-styles.scss';
 
 const ExperienceCard = ({ data }) => {
@@ -10,8 +11,15 @@ const ExperienceCard = ({ data }) => {
   let logoHeight = '60px'; // Hauteur par défaut (ajustée pour Openclassrooms)
 
   switch (data.company.toLowerCase()) {
+    case 'simplon':
+      logoUrl = simplonlogo;
+      logoWidth = '70px'; // Ajuster la largeur pour Bouygues Telecom si nécessaire
+      logoHeight = '70px';
+      break;
     case 'openclassrooms':
       logoUrl = openclassroomsLogo;
+      logoWidth = '65px'; // Ajuster la largeur pour Bouygues Telecom si nécessaire
+      logoHeight = '65px'; // Ajuster la hauteur pour Bouygues Telecom si nécessaire
       break;
     case 'bouygues telecom':
       logoUrl = bouyguesTelecomLogo;

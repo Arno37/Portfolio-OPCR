@@ -4,6 +4,8 @@ import Typist from "react-typist-component";
 import { Jumbotron } from "./migration";
 import { mainBody } from "../../editable-stuff/config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPython } from '@fortawesome/free-brands-svg-icons';
+import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { faJsSquare, faReact, faHtml5, faCss3Alt, faNodeJs } from "@fortawesome/free-brands-svg-icons";
 import { SiMongodb } from "react-icons/si";
 
@@ -53,17 +55,19 @@ const MainBody = memo(
               <div style={{ marginTop: '10px', fontSize: '1em' }}>HTML5</div>
             </div>
             <div style={{ margin: '0 15px', textAlign: 'center' }}>
-              <FontAwesomeIcon icon={faCss3Alt} size="3x" color="#1572B6" />
-              <div style={{ marginTop: '10px', fontSize: '1em' }}>CSS3</div>
-            </div>
-            <div style={{ margin: '0 15px', textAlign: 'center' }}>
-              <FontAwesomeIcon icon={faReact} size="3x" color="#61DAFB" />
-              <div style={{ marginTop: '10px', fontSize: '1em' }}>React</div>
-            </div>
-            <div style={{ margin: '0 15px', textAlign: 'center' }}>
               <FontAwesomeIcon icon={faJsSquare} size="3x" color="#F7DF1E" />
               <div style={{ marginTop: '10px', fontSize: '1em' }}>JavaScript</div>
             </div>
+            <div style={{ margin: '0 15px', textAlign: 'center' }}>
+  <FontAwesomeIcon icon={faPython} size="3x" color="#3776AB" />
+  <div style={{ marginTop: '10px', fontSize: '1em' }}>Python</div>
+</div>
+<div style={{ margin: '0 15px', textAlign: 'center' }}>
+  <FontAwesomeIcon icon={faDatabase} size="3x" color="#00618A" />
+  <div style={{ marginTop: '10px', fontSize: '1em' }}>SQL</div>
+</div>
+
+
           </div>
         </Container>
       </Jumbotron>
