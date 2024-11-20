@@ -79,19 +79,19 @@ const experiences = {
   heading: "Expériences",
   data: [
     {
-      role: "En formation de Développeur Data IA en alternance",
+      role: "En formation de Développeur Data IA en alternance - niveau 6",
       company: "Simplon",
       date: "Novembre 2024 – Septembre 2026",
     },
     {
-      role: "Certification de Développeur Web",
+      role: "Certificat RNCP de Développeur Intégrateur Web - niveau 5",
       company: "OpenClassrooms",
       date: "Décembre 2023 – Juillet 2024",
     },
     {
       role: "Conseiller Clientèle Expert",
       company: "Bouygues Telecom",
-      date: "2006 – 2022",
+      date: "2006 – 2022", 
     },
   ],
 };
