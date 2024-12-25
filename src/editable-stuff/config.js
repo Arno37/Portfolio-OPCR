@@ -37,9 +37,9 @@ const about = {
   imageSize: 160,
   message:
     "Après une carrière très enrichissante de 16 ans chez Bouygues Telecom, j’ai réorienté mon avenir professionnel dans le Développement Web ainsi que la Data en lien avec l'IA. " +
-    "Après une formation en développement web, j’ai obtenu une certification RNCP de niveau 5 de #Développeur #Intégrateur #Web, qui m’a permis d’acquérir des compétences techniques pour réaliser des projets #front-end et #back-end. 📚👨🏻‍🎓"+
-    "J’ai décidé de poursuivre une autre formation de niveau 6 avec #Simplon et le #Greta Centre-Val-de-Loire en alternance pour devenir #Développeur #Data #IA 🤖"+ 
-    "Cette formation me forme aux métiers de la #data et de l’#intelligence #artificielle, en m’enseignant des compétences telles que le traitement de données, le #machinelearning et le développement d’outils basés sur l’#IA, tout en consolidant mes bases en #développement."
+    "Suite à une formation en développement web, j’ai obtenu une certification RNCP de niveau 5 de Développeur Intégrateur Web, qui m’a permis d’acquérir des compétences techniques pour réaliser des projets front-end et back-end. 📚👨🏻‍🎓."+
+    " J’ai décidé de poursuivre une autre formation de niveau 6 avec Simplon et le Greta Centre-Val-de-Loire en alternance pour aspirer au métier de  Développeur Data IA 🤖."+ 
+    " Cette formation me forme aux métiers de la data et de l’intelligence artificielle, en m’enseignant des compétences telles que le traitement de données, le machine learning et le développement d’outils basés sur l’IA, tout en consolidant mes bases en développement."
 };
 
 const repos = {

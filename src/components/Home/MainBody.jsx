@@ -6,7 +6,8 @@ import { mainBody } from "../../editable-stuff/config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPython } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-import { faJsSquare, faReact, faHtml5, faCss3Alt, faNodeJs } from "@fortawesome/free-brands-svg-icons";
+
+import { faJsSquare, faHtml5, faNodeJs } from "@fortawesome/free-brands-svg-icons";
 import { SiMongodb } from "react-icons/si";
 
 const MainBody = memo(
