@@ -9,14 +9,14 @@ import {
   getInTouch,
   experiences
 } from "./editable-stuff/config.js";
-import MainBody from "./components/home/MainBody.jsx";
-import AboutMe from "./components/home/AboutMe.jsx";
-import Project from "./components/home/Project.jsx";
+import MainBody from "./components/Home/MainBody.jsx";
+import AboutMe from "./components/Home/AboutMe.jsx";
+import Project from "./components/Home/Project.jsx";
 import Footer from "./components/Footer.jsx";
 import Navbar from "./components/Navbar.jsx";
-import Skills from "./components/home/Skills.jsx";
-import GetInTouch from "./components/home/GetInTouch.jsx";
-import Experience from "./components/home/Experience.jsx";
+import Skills from "./components/Home/Skills.jsx";
+import GetInTouch from "./components/Home/GetInTouch.jsx";
+import Experience from "./components/Home/Experience.jsx";
 
 const Home = React.forwardRef(({ isMenuOpen }, ref) => {
   return (

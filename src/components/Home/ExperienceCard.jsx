@@ -3,28 +3,28 @@ import { Col } from 'react-bootstrap';
 import openclassroomsLogo from '../../assets/Logo_OpenClassrooms.webp';
 import bouyguesTelecomLogo from '../../assets/bt.webp';
 import simplonlogo from '../../assets/simplon.png';
+import enedisLogo from '../../assets/enedis.png';
 import '../../scss/custom-styles.scss';
 
 const ExperienceCard = ({ data }) => {
   let logoUrl;
-  let logoWidth = '60px'; // Largeur par défaut (ajustée pour Openclassrooms)
-  let logoHeight = '60px'; // Hauteur par défaut (ajustée pour Openclassrooms)
+  let logoWidth = '70px';
+  let logoHeight = '70px';
 
   switch (data.company.toLowerCase()) {
     case 'simplon':
       logoUrl = simplonlogo;
-      logoWidth = '70px'; // Ajuster la largeur pour Bouygues Telecom si nécessaire
-      logoHeight = '70px';
       break;
     case 'openclassrooms':
       logoUrl = openclassroomsLogo;
-      logoWidth = '65px'; // Ajuster la largeur pour Bouygues Telecom si nécessaire
-      logoHeight = '65px'; // Ajuster la hauteur pour Bouygues Telecom si nécessaire
+      logoWidth = '75px';
+      logoHeight = '75px';
       break;
     case 'bouygues telecom':
       logoUrl = bouyguesTelecomLogo;
-      logoWidth = '70px'; // Ajuster la largeur pour Bouygues Telecom si nécessaire
-      logoHeight = '60px'; // Ajuster la hauteur pour Bouygues Telecom si nécessaire
+      break;
+    case 'enedis':
+      logoUrl = enedisLogo;
       break;
     default:
       logoUrl = null;
@@ -32,25 +32,56 @@ const ExperienceCard = ({ data }) => {
   }
 
   return (
-    <Col lg="6">
-      <div className="pb-5 text-center">
+    <Col lg="6" className="mb-4">
+      <div className="glass-card hover-lift h-100" style={{
+        padding: '2rem',
+        textAlign: 'center'
+      }}>
         {logoUrl && (
-          <img
-            className="bg-white mb-3"
-            src={logoUrl}
-            alt={data.company}
-            width={logoWidth}
-            height={logoHeight}
-            style={{
-              maxWidth: logoWidth,
-              margin: '0 auto',
-              display: 'block',
-            }}
-          />
+          <div style={{
+            background: 'rgba(255, 255, 255, 0.1)',
+            borderRadius: '50%',
+            width: '100px',
+            height: '100px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0 auto 1.5rem',
+            border: '2px solid var(--ai-cyan-400)',
+            boxShadow: '0 0 20px rgba(6, 182, 212, 0.3)'
+          }}>
+            <img
+              src={logoUrl}
+              alt={data.company}
+              width={logoWidth}
+              height={logoHeight}
+              style={{
+                maxWidth: logoWidth,
+                objectFit: 'contain'
+              }}
+            />
+          </div>
         )}
-        <p className="lead">
-          {data.role} <br />
-          {data.company} <br />
+        <h5 style={{
+          color: 'var(--ai-cyan-400)',
+          fontWeight: 600,
+          marginBottom: '0.5rem'
+        }}>
+          {data.role}
+        </h5>
+        <p style={{
+          fontSize: '1.1rem',
+          fontWeight: 500,
+          marginBottom: '0.5rem',
+          color: 'rgba(255, 255, 255, 0.9)'
+        }}>
+          {data.company}
+        </p>
+        <p style={{
+          fontSize: '0.95rem',
+          color: 'rgba(255, 255, 255, 0.7)',
+          marginBottom: 0
+        }}>
           {data.date}
         </p>
       </div>

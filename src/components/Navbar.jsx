@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import { useScrollPosition } from "../../src/hooks/useScrollPosition.js";
 import useResizeObserver from "../../src/hooks/useResizeObserver.js";
 import { repos, about, skills, experiences } from "../../src/editable-stuff/config.js";
-import { NavLink } from "./home/migration.jsx";
+import { NavLink } from "./Home/migration.jsx";
 
 const Navigation = React.memo(({ isMenuOpen, setIsMenuOpen }) => {
   const [isTop, setIsTop] = useState(true);
@@ -58,7 +58,7 @@ const Navigation = React.memo(({ isMenuOpen, setIsMenuOpen }) => {
               A Propos
             </NavLink>
           )}
-            {experiences.show && (
+          {experiences.show && (
             <NavLink className="nav-item nav-link-wrapper" href={process.env.PUBLIC_URL + "/#experience"}>
               Expériences
             </NavLink>
@@ -69,7 +69,7 @@ const Navigation = React.memo(({ isMenuOpen, setIsMenuOpen }) => {
               Projets
             </NavLink>
           )}
-          
+
           {skills.show && (
             <NavLink className="nav-item nav-link-wrapper" href={process.env.PUBLIC_URL + "/#skills"}>
               Skills

@@ -5,17 +5,17 @@ import { Jumbotron } from './migration';
 import { Container, Row } from "react-bootstrap";
 
 const Experience = ({ experiences }) => {
-  console.log('Experiences prop:', experiences); // Ajout pour vérifier les données
+  console.log('Experiences prop:', experiences);
 
   if (!experiences || !experiences.show) {
     return null;
   }
 
   return (
-    <section id="experience" className="section">
+    <section id="experience" className="section" style={{ padding: '4rem 0' }}>
       <Container>
-        <Jumbotron id="experience-jumbotron" className="bg-white">
-          <h2 id="experience-heading" className="display-4 mb-5 text-center">
+        <Jumbotron id="experience-jumbotron" style={{ background: 'transparent' }}>
+          <h2 id="experience-heading" className="section-heading display-4 mb-5">
             {experiences.heading}
           </h2>
           <Row>

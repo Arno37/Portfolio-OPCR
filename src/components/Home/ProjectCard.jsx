@@ -11,16 +11,29 @@ const ProjectCard = ({ value }) => {
   return (
     <Col xs={12} sm={6} md={4} lg={3} className="mb-4">
       <LazyLoad height={200} once>
-        <Card className="shadow-sm h-100">
+        <Card className="glass-card hover-lift h-100" style={{
+          border: 'none',
+          background: 'var(--glass-bg)',
+          backdropFilter: 'var(--glass-backdrop)'
+        }}>
           <Card.Body>
-            <Card.Title as="h5">{name || <Skeleton />}</Card.Title>
+            <Card.Title as="h5" style={{
+              color: 'var(--ai-cyan-400)',
+              fontWeight: 600,
+              marginBottom: '1rem'
+            }}>
+              {name || <Skeleton />}
+            </Card.Title>
 
             {svn_url ? (
               <CardButtons svn_url={svn_url} />
             ) : (
               <Skeleton count={2} />
             )}
-            <hr />
+            <hr style={{
+              borderColor: 'rgba(255, 255, 255, 0.1)',
+              margin: '1rem 0'
+            }} />
             {languages_url ? (
               <Language languages_url={languages_url} />
             ) : (
@@ -39,16 +52,30 @@ const CardButtons = ({ svn_url }) => (
       href={svn_url}
       target="_blank"
       rel="noopener noreferrer"
-      className="btn btn-outline-secondary"
-      style={{ marginBottom: "0.5rem" }}
+      className="btn btn-sm smooth-transition"
+      style={{
+        background: 'transparent',
+        border: '1px solid var(--ai-cyan-400)',
+        color: 'var(--ai-cyan-400)',
+        marginBottom: "0.5rem",
+        marginRight: "0.5rem",
+        borderRadius: '6px'
+      }}
     >
       <i className="fab fa-github" /> Repo GitHub
     </a>
     <a
       href={`${svn_url}/archive/master.zip`}
-      className="btn btn-outline-secondary mb-2"
+      className="btn btn-sm smooth-transition"
+      style={{
+        background: 'transparent',
+        border: '1px solid var(--ai-purple-500)',
+        color: 'var(--ai-purple-500)',
+        marginBottom: "0.5rem",
+        borderRadius: '6px'
+      }}
     >
-      <i className="fab fa-github" /> Téléchargement du projet
+      <i className="fab fa-github" /> Télécharger
     </a>
   </div>
 );
@@ -64,7 +91,6 @@ const Language = ({ languages_url }) => {
         setData(response.data);
       } catch (error) {
         console.error(`Error fetching languages: ${error.message}`);
-        // Handle error or set a default state for data
       } finally {
         setLoading(false);
       }
@@ -97,12 +123,12 @@ const Language = ({ languages_url }) => {
   };
 
   return (
-    <div className="pb-3">
+    <div className="pb-3" style={{ fontSize: '0.9rem', color: 'rgba(255, 255, 255, 0.8)' }}>
       Langages:{" "}
       {loading
         ? "Chargement..."
         : Object.keys(data).length
-        ? Object.keys(data).map((language) => (
+          ? Object.keys(data).map((language) => (
             <span key={language} style={{ marginRight: "0.5rem" }}>
               <span
                 style={{
@@ -117,7 +143,7 @@ const Language = ({ languages_url }) => {
               {language}: {getLanguagePercentage(language)} %
             </span>
           ))
-        : "projet sans codes"}
+          : "projet sans codes"}
     </div>
   );
 };

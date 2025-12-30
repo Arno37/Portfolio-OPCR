@@ -1,6 +1,4 @@
 import React from "react";
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
 import SkillsTab from "./SkillsTab";
 import Row from "react-bootstrap/Row";
 import { Jumbotron } from "./migration";
@@ -19,26 +17,21 @@ const Skills = React.forwardRef(({ heading, softSkills }, ref) => {
   );
 
   return (
-    <Jumbotron ref={skillsTabRef} fluid className="bg-white m-0" id="skills">
+    <Jumbotron ref={skillsTabRef} fluid style={{ background: 'transparent' }} className="m-0" id="skills">
       <Container className="p-5">
-        <h2 className="display-4 pb-5 text-center">{heading}</h2>
-        <Tabs
-          className="skills-tabs"
-          defaultActiveKey="hard-skills"
-          id="skills-tabs"
-          fill
-        >
-          
-          <Tab
-            tabClassName="skills-tab lead"
-            eventKey="soft-skills"
-            title="Compétences Relationnelles"
-          >
-            <Row className="pt-3 px-1">
-              <SkillsTabMemo skills={softSkills} isScrolled={isScrolled} />
-            </Row>
-          </Tab>
-        </Tabs>
+        <h2 className="section-heading display-4 pb-5">{heading}</h2>
+        <h3 style={{
+          color: 'var(--ai-cyan-400)',
+          fontSize: '1.5rem',
+          fontWeight: 600,
+          marginBottom: '2rem',
+          textAlign: 'center'
+        }}>
+          Compétences Relationnelles
+        </h3>
+        <Row className="pt-3 px-1">
+          <SkillsTabMemo skills={softSkills} isScrolled={isScrolled} />
+        </Row>
       </Container>
     </Jumbotron>
   );
