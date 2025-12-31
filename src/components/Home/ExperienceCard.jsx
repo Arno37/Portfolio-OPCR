@@ -59,8 +59,7 @@ const ExperienceCard = ({ data }) => {
               height={logoHeight}
               style={{
                 maxWidth: logoWidth,
-                objectFit: 'cover',
-                borderRadius: '50%'
+                objectFit: 'contain'
               }}
             />
           </div>
