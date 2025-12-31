@@ -40,15 +40,14 @@ const AboutMe = ({ heading, message, link, imgSize, imageHeight, resume, isMenuO
                 display: 'inline-block'
               }}>
                 <img
-                  className="rounded-circle"
                   src={profilePicUrl}
                   alt="profilepicture"
                   width={imgSize}
                   height={imageHeight}
                   loading="lazy"
                   style={{
-                    border: '3px solid var(--ai-cyan-400)',
-                    boxShadow: '0 0 30px rgba(6, 182, 212, 0.3)'
+                    borderRadius: '10px',
+                    objectFit: 'cover'
                   }}
                 />
               </div>
