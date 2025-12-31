@@ -25,6 +25,8 @@ const ExperienceCard = ({ data }) => {
       break;
     case 'enedis':
       logoUrl = enedisLogo;
+      logoWidth = '100px';
+      logoHeight = '100px';
       break;
     default:
       logoUrl = null;
@@ -57,7 +59,10 @@ const ExperienceCard = ({ data }) => {
               height={logoHeight}
               style={{
                 maxWidth: logoWidth,
-                objectFit: 'contain'
+                objectFit: 'cover',
+                ...(data.company.toLowerCase() === 'enedis' && {
+                  borderRadius: '50%'
+                })
               }}
             />
           </div>
