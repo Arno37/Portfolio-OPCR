@@ -33,6 +33,16 @@
     box-shadow: none;
 }
 
+.navbar-toggler,
+.navbar-toggler-icon {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+}
+
 .technology-icons {
     display: flex;
     flex-wrap: wrap;
@@ -61,5 +71,18 @@
 @media (max-width: 767.98px) {
     .mobile-margin-left {
         margin-left: 10px !important;
+    }
+
+    .technology-icons {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 15px !important;
+        max-width: 400px;
+        margin: 30px auto 0 !important;
+    }
+
+    .tech-icon {
+        min-width: auto !important;
+        margin: 0 !important;
     }
 }

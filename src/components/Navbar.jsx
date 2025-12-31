@@ -47,6 +47,7 @@ const Navigation = React.memo(({ isMenuOpen, setIsMenuOpen }) => {
         className="navbar-brand"
         href={process.env.PUBLIC_URL + "/#Portfolio"}
         onClick={handleScrollToTop}
+        style={{ color: '#ffffff' }}
       >
         Accueil
       </Navbar.Brand>
