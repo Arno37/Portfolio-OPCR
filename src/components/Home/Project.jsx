@@ -3,73 +3,28 @@ import Container from "react-bootstrap/Container";
 import { Jumbotron } from "./migration";
 import Row from "react-bootstrap/Row";
 import ProjectCard from "./ProjectCard";
-import axios from "axios";
-
-const dummyProject = {
-  name: null,
-  description: null,
-  svn_url: null,
-  stargazers_count: null,
-  languages_url: null,
-  pushed_at: null,
-};
-const API = "https://api.github.com";
+import projectsData from "./projects-data.json";
 
 const Project = ({ heading, username, length, specfic }) => {
-  const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
-  const specficReposAPI = `${API}/repos/${username}`;
-  const dummyProjectsArr = new Array(length + specfic.length).fill(
-    dummyProject
-  );
-
   const [projectsArray, setProjectsArray] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [totalRepos, setTotalRepos] = useState(0);
 
-  const fetchRepos = useCallback(async () => {
-    let repoList = [];
-    setLoading(true);
-    setError(null);
-
-    // Configuration pour l'authentification GitHub
-    const config = process.env.REACT_APP_GITHUB_TOKEN
-      ? { headers: { Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}` } }
-      : {};
-
+  useEffect(() => {
     try {
-      const response = await axios.get(allReposAPI, config);
-      repoList = [...response.data.slice(0, length)];
-
-      // Récupérer le nombre total de repos
-      const userResponse = await axios.get(`${API}/users/${username}`, config);
-      setTotalRepos(userResponse.data.public_repos);
-
-      for (let repoName of specfic) {
-        try {
-          const response = await axios.get(`${specficReposAPI}/${repoName}`, config);
-          repoList.push(response.data);
-        } catch (error) {
-          console.error(`Error fetching specific repo '${repoName}': ${error.message}`);
-        }
-      }
-
+      setLoading(true);
+      // Utiliser les données statiques
+      const repoList = projectsData.repos.slice(0, length);
+      setTotalRepos(projectsData.totalRepos);
       setProjectsArray(repoList);
-    } catch (error) {
-      console.error(`Error fetching all repos: ${error.message}`);
-      if (error.response && error.response.status === 403) {
-        setError("Limite de l'API GitHub atteinte. Les projets seront disponibles dans environ une heure.");
-      } else {
-        setError("Erreur lors du chargement des projets GitHub.");
-      }
-    } finally {
+      setLoading(false);
+    } catch (err) {
+      console.error("Erreur lors du chargement des projets:", err);
+      setError("Erreur lors du chargement des projets.");
       setLoading(false);
     }
-  }, [allReposAPI, length, specfic, specficReposAPI, username]);
-
-  useEffect(() => {
-    fetchRepos();
-  }, [fetchRepos]);
+  }, [length]);
 
   return (
     <Jumbotron fluid id="projects" style={{ background: 'transparent', padding: '4rem 0' }} className="m-0">
@@ -104,13 +59,7 @@ const Project = ({ heading, username, length, specfic }) => {
                 value={project}
               />
             ))
-            : loading && dummyProjectsArr.map((project, index) => (
-              <ProjectCard
-                key={`dummy-${index}`}
-                id={`dummy-${index}`}
-                value={project}
-              />
-            ))}
+            : null}
         </Row>
 
         {projectsArray.length > 0 && totalRepos > projectsArray.length && (
