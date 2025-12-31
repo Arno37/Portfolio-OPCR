@@ -60,9 +60,7 @@ const ExperienceCard = ({ data }) => {
               style={{
                 maxWidth: logoWidth,
                 objectFit: 'cover',
-                ...(data.company.toLowerCase() === 'enedis' && {
-                  borderRadius: '50%'
-                })
+                borderRadius: '50%'
               }}
             />
           </div>
