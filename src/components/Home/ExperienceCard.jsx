@@ -49,8 +49,6 @@ const ExperienceCard = ({ data }) => {
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0 auto 1.5rem',
-            border: '2px solid var(--ai-cyan-400)',
-            boxShadow: '0 0 20px rgba(6, 182, 212, 0.3)',
             overflow: 'hidden'
           }}>
             <img
