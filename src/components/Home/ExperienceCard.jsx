@@ -42,7 +42,7 @@ const ExperienceCard = ({ data }) => {
         {logoUrl && (
           <div style={{
             background: 'rgba(255, 255, 255, 0.1)',
-            borderRadius: '50%',
+            borderRadius: '20px',
             width: '100px',
             height: '100px',
             display: 'flex',
@@ -50,16 +50,18 @@ const ExperienceCard = ({ data }) => {
             justifyContent: 'center',
             margin: '0 auto 1.5rem',
             border: '2px solid var(--ai-cyan-400)',
-            boxShadow: '0 0 20px rgba(6, 182, 212, 0.3)'
+            boxShadow: '0 0 20px rgba(6, 182, 212, 0.3)',
+            overflow: 'hidden'
           }}>
             <img
               src={logoUrl}
               alt={data.company}
-              width={logoWidth}
-              height={logoHeight}
+              width="100%"
+              height="100%"
               style={{
-                maxWidth: logoWidth,
-                objectFit: 'contain'
+                objectFit: 'cover',
+                width: '100%',
+                height: '100%'
               }}
             />
           </div>
