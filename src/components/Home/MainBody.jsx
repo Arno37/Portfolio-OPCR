@@ -82,7 +82,7 @@ const MainBody = memo(
               padding: '1.5rem',
               minWidth: '120px'
             }}>
-              <FontAwesomeIcon icon={faPython} size="3x" color="#3776AB" />
+              <FontAwesomeIcon icon={faPython} size="3x" color="#FFD43B" />
               <div style={{ marginTop: '10px', fontSize: '1em', fontWeight: 500 }}>Python</div>
             </div>
             <div className="tech-icon glass-card" style={{
