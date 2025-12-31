@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Portfolio-OPCR/static/css/main.ce655640.css",
-    "main.js": "/Portfolio-OPCR/static/js/main.d07276c9.js",
+    "main.css": "/Portfolio-OPCR/static/css/main.22846c15.css",
+    "main.js": "/Portfolio-OPCR/static/js/main.8b5fe964.js",
     "static/js/453.19c7e6ca.chunk.js": "/Portfolio-OPCR/static/js/453.19c7e6ca.chunk.js",
     "static/media/enedis.png": "/Portfolio-OPCR/static/media/enedis.8f2f76b5d04e6854c245.png",
     "static/media/image.webp": "/Portfolio-OPCR/static/media/image.4beefc458383cf5bba9f.webp",
     "static/media/bt.webp": "/Portfolio-OPCR/static/media/bt.3a0a663cc3d11954b6fe.webp",
     "static/media/Logo_OpenClassrooms.webp": "/Portfolio-OPCR/static/media/Logo_OpenClassrooms.302e38e50c7a6411dfc6.webp",
     "index.html": "/Portfolio-OPCR/index.html",
-    "main.ce655640.css.map": "/Portfolio-OPCR/static/css/main.ce655640.css.map",
-    "main.d07276c9.js.map": "/Portfolio-OPCR/static/js/main.d07276c9.js.map",
+    "main.22846c15.css.map": "/Portfolio-OPCR/static/css/main.22846c15.css.map",
+    "main.8b5fe964.js.map": "/Portfolio-OPCR/static/js/main.8b5fe964.js.map",
     "453.19c7e6ca.chunk.js.map": "/Portfolio-OPCR/static/js/453.19c7e6ca.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce655640.css",
-    "static/js/main.d07276c9.js"
+    "static/css/main.22846c15.css",
+    "static/js/main.8b5fe964.js"
   ]
 }
