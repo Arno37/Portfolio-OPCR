@@ -30,7 +30,6 @@ const Project = ({ heading, username, length, specfic }) => {
     <Jumbotron fluid id="projects" style={{ background: 'transparent', padding: '4rem 0' }} className="m-0">
       <Container>
         <h2 className="section-heading display-4 pb-5">
-          {totalRepos > 0 && <span style={{ color: 'var(--ai-cyan-400)' }}>{totalRepos} </span>}
           {heading}
         </h2>
 
