@@ -37,7 +37,7 @@ const ExperienceCard = ({ data }) => {
       }}>
         {logoUrl && (
           <div style={{
-            background: 'rgba(255, 255, 255, 0.1)',
+            background: isBouygues ? '#ffffff' : 'rgba(255, 255, 255, 0.1)',
             borderRadius: '20px',
             width: '100px',
             height: '100px',
