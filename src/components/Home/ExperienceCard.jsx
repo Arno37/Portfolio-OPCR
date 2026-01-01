@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 import openclassroomsLogo from '../../assets/Logo_OpenClassrooms.webp';
-import bouyguesTelecomLogo from '../../assets/bt_clean.png';
+import bouyguesTelecomLogo from '../../assets/bt.webp';
 import simplonlogo from '../../assets/simplon.png';
 import enedisLogo from '../../assets/enedis.png';
 import '../../scss/custom-styles.scss';
@@ -27,7 +27,7 @@ const ExperienceCard = ({ data }) => {
       break;
   }
 
-  const isBouygues = data.company.toLowerCase() === 'bouygues telecom';
+
 
   return (
     <Col lg="6" className="mb-4">
@@ -45,7 +45,7 @@ const ExperienceCard = ({ data }) => {
             margin: '0 auto 1.5rem',
             overflow: 'hidden',
             borderRadius: '20px',
-            background: isBouygues ? '#ffffff' : 'rgba(255, 255, 255, 0.1)'
+            background: 'rgba(255, 255, 255, 0.1)'
           }}>
             <img
               src={logoUrl}
@@ -55,8 +55,7 @@ const ExperienceCard = ({ data }) => {
               style={{
                 objectFit: 'cover',
                 width: '100%',
-                height: '100%',
-                padding: isBouygues ? '15px' : '0'
+                height: '100%'
               }}
             />
           </div>
