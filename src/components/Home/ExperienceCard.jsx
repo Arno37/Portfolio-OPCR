@@ -36,29 +36,32 @@ const ExperienceCard = ({ data }) => {
         textAlign: 'center'
       }}>
         {logoUrl && (
-          <div style={{
-            width: '100px',
-            height: '100px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            margin: '0 auto 1.5rem',
-            overflow: 'hidden',
-            borderRadius: '20px',
-            background: 'rgba(255, 255, 255, 0.1)'
-          }}>
-            <img
-              src={logoUrl}
-              alt={data.company}
-              width="100%"
-              height="100%"
-              style={{
-                objectFit: 'cover',
-                width: '100%',
-                height: '100%'
-              }}
-            />
-          </div>
+const isBouygues = data.company.toLowerCase() === 'bouygues telecom';
+
+        <div style={{
+          width: '100px',
+          height: '100px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          margin: '0 auto 1.5rem',
+          overflow: 'hidden',
+          borderRadius: '20px',
+          background: 'rgba(255, 255, 255, 0.1)'
+        }}>
+          <img
+            src={logoUrl}
+            alt={data.company}
+            width="100%"
+            height="100%"
+            style={{
+              objectFit: 'cover',
+              width: '100%',
+              height: '100%',
+              transform: isBouygues ? 'scale(1.5)' : 'none'
+            }}
+          />
+        </div>
         )}
         <h5 style={{
           color: 'var(--ai-cyan-400)',
