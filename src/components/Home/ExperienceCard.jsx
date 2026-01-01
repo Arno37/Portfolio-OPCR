@@ -56,7 +56,7 @@ const ExperienceCard = ({ data }) => {
                 objectFit: 'cover',
                 width: '100%',
                 height: '100%',
-                transform: isBouygues ? 'scale(1.5)' : 'none'
+                transform: isBouygues ? 'scale(1.8)' : 'none'
               }}
             />
           </div>
