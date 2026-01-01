@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 import openclassroomsLogo from '../../assets/Logo_OpenClassrooms.webp';
-import bouyguesTelecomLogo from '../../assets/bt.webp';
+import bouyguesTelecomLogo from '../../assets/bt_new.png';
 import simplonlogo from '../../assets/simplon.png';
 import enedisLogo from '../../assets/enedis.png';
 import '../../scss/custom-styles.scss';
@@ -36,55 +36,44 @@ const ExperienceCard = ({ data }) => {
         textAlign: 'center'
       }}>
         {logoUrl && (
-          <div style={{
-            background: isBouygues ? '#ffffff' : 'rgba(255, 255, 255, 0.1)',
-            borderRadius: '20px',
-            width: '100px',
-            height: '100px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            margin: '0 auto 1.5rem',
-            overflow: 'hidden'
-          }}>
-            <img
-              src={logoUrl}
-              alt={data.company}
-              width="100%"
-              height="100%"
-              style={{
-                objectFit: 'cover',
-                width: '100%',
-                height: '100%',
-                padding: isBouygues ? '15px' : '0'
-              }}
-            />
+          <img
+            src={logoUrl}
+            alt={data.company}
+            width="100%"
+            height="100%"
+            style={{
+              objectFit: 'cover',
+              width: '100%',
+              height: '100%',
+              borderRadius: '20px' // Ensure slight rounding on image itself if needed
+            }}
+          />
           </div>
         )}
-        <h5 style={{
-          color: 'var(--ai-cyan-400)',
-          fontWeight: 600,
-          marginBottom: '0.5rem'
-        }}>
-          {data.role}
-        </h5>
-        <p style={{
-          fontSize: '1.1rem',
-          fontWeight: 500,
-          marginBottom: '0.5rem',
-          color: 'rgba(255, 255, 255, 0.9)'
-        }}>
-          {data.company}
-        </p>
-        <p style={{
-          fontSize: '0.95rem',
-          color: 'rgba(255, 255, 255, 0.7)',
-          marginBottom: 0
-        }}>
-          {data.date}
-        </p>
-      </div>
-    </Col>
+      <h5 style={{
+        color: 'var(--ai-cyan-400)',
+        fontWeight: 600,
+        marginBottom: '0.5rem'
+      }}>
+        {data.role}
+      </h5>
+      <p style={{
+        fontSize: '1.1rem',
+        fontWeight: 500,
+        marginBottom: '0.5rem',
+        color: 'rgba(255, 255, 255, 0.9)'
+      }}>
+        {data.company}
+      </p>
+      <p style={{
+        fontSize: '0.95rem',
+        color: 'rgba(255, 255, 255, 0.7)',
+        marginBottom: 0
+      }}>
+        {data.date}
+      </p>
+    </div>
+    </Col >
   );
 };
 
