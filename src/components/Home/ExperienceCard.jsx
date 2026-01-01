@@ -8,8 +8,6 @@ import '../../scss/custom-styles.scss';
 
 const ExperienceCard = ({ data }) => {
   let logoUrl;
-  let logoWidth = '70px';
-  let logoHeight = '70px';
 
   switch (data.company.toLowerCase()) {
     case 'simplon':
@@ -17,21 +15,19 @@ const ExperienceCard = ({ data }) => {
       break;
     case 'openclassrooms':
       logoUrl = openclassroomsLogo;
-      logoWidth = '75px';
-      logoHeight = '75px';
       break;
     case 'bouygues telecom':
       logoUrl = bouyguesTelecomLogo;
       break;
     case 'enedis':
       logoUrl = enedisLogo;
-      logoWidth = '100px';
-      logoHeight = '100px';
       break;
     default:
       logoUrl = null;
       break;
   }
+
+  const isBouygues = data.company.toLowerCase() === 'bouygues telecom';
 
   return (
     <Col lg="6" className="mb-4">
@@ -59,7 +55,8 @@ const ExperienceCard = ({ data }) => {
               style={{
                 objectFit: 'cover',
                 width: '100%',
-                height: '100%'
+                height: '100%',
+                padding: isBouygues ? '15px' : '0'
               }}
             />
           </div>
