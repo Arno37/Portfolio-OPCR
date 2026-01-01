@@ -36,43 +36,53 @@ const ExperienceCard = ({ data }) => {
         textAlign: 'center'
       }}>
         {logoUrl && (
-          <img
-            src={logoUrl}
-            alt={data.company}
-            width="100%"
-            height="100%"
-            style={{
-              objectFit: 'cover',
-              width: '100%',
-              height: '100%',
-              borderRadius: '20px' // Ensure slight rounding on image itself if needed
-            }}
-          />
+          <div style={{
+            width: '100px',
+            height: '100px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: '0 auto 1.5rem',
+            overflow: 'hidden',
+            borderRadius: '20px',
+            background: 'rgba(255, 255, 255, 0.1)' // Garder le fond pour les autres logos
+          }}>
+            <img
+              src={logoUrl}
+              alt={data.company}
+              width="100%"
+              height="100%"
+              style={{
+                objectFit: 'cover',
+                width: '100%',
+                height: '100%'
+              }}
+            />
           </div>
         )}
-      <h5 style={{
-        color: 'var(--ai-cyan-400)',
-        fontWeight: 600,
-        marginBottom: '0.5rem'
-      }}>
-        {data.role}
-      </h5>
-      <p style={{
-        fontSize: '1.1rem',
-        fontWeight: 500,
-        marginBottom: '0.5rem',
-        color: 'rgba(255, 255, 255, 0.9)'
-      }}>
-        {data.company}
-      </p>
-      <p style={{
-        fontSize: '0.95rem',
-        color: 'rgba(255, 255, 255, 0.7)',
-        marginBottom: 0
-      }}>
-        {data.date}
-      </p>
-    </div>
+        <h5 style={{
+          color: 'var(--ai-cyan-400)',
+          fontWeight: 600,
+          marginBottom: '0.5rem'
+        }}>
+          {data.role}
+        </h5>
+        <p style={{
+          fontSize: '1.1rem',
+          fontWeight: 500,
+          marginBottom: '0.5rem',
+          color: 'rgba(255, 255, 255, 0.9)'
+        }}>
+          {data.company}
+        </p>
+        <p style={{
+          fontSize: '0.95rem',
+          color: 'rgba(255, 255, 255, 0.7)',
+          marginBottom: 0
+        }}>
+          {data.date}
+        </p>
+      </div>
     </Col >
   );
 };
