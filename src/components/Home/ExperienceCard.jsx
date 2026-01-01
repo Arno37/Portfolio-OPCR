@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 import openclassroomsLogo from '../../assets/Logo_OpenClassrooms.webp';
-import bouyguesTelecomLogo from '../../assets/bt.webp';
+import bouyguesTelecomLogo from '../../assets/logo-bouygues-telecom.png';
 import simplonlogo from '../../assets/simplon.png';
 import enedisLogo from '../../assets/enedis.png';
 import '../../scss/custom-styles.scss';
