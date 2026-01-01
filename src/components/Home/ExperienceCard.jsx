@@ -45,7 +45,7 @@ const ExperienceCard = ({ data }) => {
             margin: '0 auto 1.5rem',
             overflow: 'hidden',
             borderRadius: '20px',
-            background: 'rgba(255, 255, 255, 0.1)'
+            background: isBouygues ? '#ffffff' : 'rgba(255, 255, 255, 0.1)'
           }}>
             <img
               src={logoUrl}
