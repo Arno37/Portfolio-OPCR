@@ -4,7 +4,7 @@ import Typist from "react-typist-component";
 import { Jumbotron } from "./migration";
 import { mainBody } from "../../editable-stuff/config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPython } from '@fortawesome/free-brands-svg-icons';
+
 import { faDatabase, faBrain } from '@fortawesome/free-solid-svg-icons';
 
 import { faJsSquare, faNodeJs, faDocker } from "@fortawesome/free-brands-svg-icons";

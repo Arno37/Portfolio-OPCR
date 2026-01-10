@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import { Jumbotron } from "./migration";
 import Row from "react-bootstrap/Row";
@@ -7,22 +7,22 @@ import projectsData from "./projects-data.json";
 
 const Project = ({ heading, username, length, specfic }) => {
   const [projectsArray, setProjectsArray] = useState([]);
-  const [loading, setLoading] = useState(true);
+
   const [error, setError] = useState(null);
   const [totalRepos, setTotalRepos] = useState(0);
 
   useEffect(() => {
     try {
-      setLoading(true);
+
       // Utiliser les données statiques
       const repoList = projectsData.repos.slice(0, length);
       setTotalRepos(projectsData.totalRepos);
       setProjectsArray(repoList);
-      setLoading(false);
+
     } catch (err) {
       console.error("Erreur lors du chargement des projets:", err);
       setError("Erreur lors du chargement des projets.");
-      setLoading(false);
+
     }
   }, [length]);
 
