@@ -38,10 +38,10 @@ const Home = React.forwardRef(({ isMenuOpen }, ref) => {
         />
       )}
       {experiences.show && (
-        <Experience 
-        experiences={experiences}
-        heading={experiences.heading}/>
-       
+        <Experience
+          experiences={experiences}
+          heading={experiences.heading} />
+
       )}
       {repos.show && (
         <Project
@@ -54,7 +54,7 @@ const Home = React.forwardRef(({ isMenuOpen }, ref) => {
       {skills.show && (
         <Skills
           heading={skills.heading}
-          
+
           softSkills={skills.softSkills}
         />
       )}
@@ -67,14 +67,14 @@ const App = () => {
   const titleRef = useRef();
 
   return (
-    <BrowserRouter basename="/PORTFOLIO-OPCR">
+    <BrowserRouter basename={process.env.NODE_ENV === 'development' ? '/' : process.env.PUBLIC_URL}>
       {navBar.show && <Navbar ref={titleRef} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
       <Routes>
         <Route path="/" exact element={<Home ref={titleRef} isMenuOpen={isMenuOpen} />} />
       </Routes>
       <Footer>
         {getInTouch.show && (
-          <GetInTouch/>
+          <GetInTouch />
         )}
       </Footer>
     </BrowserRouter>

@@ -60,12 +60,11 @@ const skills = {
     { name: "MongoDB" },
   ],
   softSkills: [
-    { name: "Positif", value: 80 },
-    { name: "Résilient", value: 82 },
-    { name: "Curieux", value: 75 },
-    { name: "Autonome", value: 85 },
-    { name: "Persévérant", value: 90 },
-    { name: "Rigoureux", value: 84 },
+    { name: "Agilité", value: 90 },
+    { name: "Pédagogie Technique", value: 85 },
+    { name: "Communication Asynchrone", value: 85 },
+    { name: "Proactivité", value: 90 },
+    { name: "Esprit Collaboratif", value: 95 },
   ],
 };
 

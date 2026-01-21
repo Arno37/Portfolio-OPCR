@@ -27,7 +27,7 @@ const Skills = React.forwardRef(({ heading, softSkills }, ref) => {
           marginBottom: '2rem',
           textAlign: 'center'
         }}>
-          Compétences Relationnelles
+          Compétences Transverses
         </h3>
         <Row className="pt-3 px-1">
           <SkillsTabMemo skills={softSkills} isScrolled={isScrolled} />
