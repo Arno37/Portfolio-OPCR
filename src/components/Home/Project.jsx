@@ -79,7 +79,7 @@ const Project = ({ heading, username, length, specfic }) => {
                 display: 'inline-block'
               }}
             >
-              Voir tous mes projets sur GitHub →
+              Ensemble des projets GitHub →
             </a>
           </div>
         )}
