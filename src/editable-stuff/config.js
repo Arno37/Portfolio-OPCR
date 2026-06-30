@@ -62,6 +62,7 @@ const skills = {
     { name: "LangSmith" },
     { name: "API REST" },
     { name: "GitLab CI/CD" },
+    { name: "MLOps" },
   ],
   softSkills: [
     { name: "Sens du service client", value: 95 },
